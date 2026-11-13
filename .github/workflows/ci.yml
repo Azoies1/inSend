@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: rtr
+          POSTGRES_PASSWORD: rtr_local_dev
+          POSTGRES_DB: rtr_sandbox
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U rtr -d rtr_sandbox"
+          --health-interval 2s
+          --health-timeout 3s
+          --health-retries 30
+    env:
+      PAYMENT_ADAPTER: fake
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run migrate
+      - run: npm test
+      - name: Health endpoint responds
+        run: |
+          npm run serve &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:3000/health; then exit 0; fi
+            sleep 1
+          done
+          echo "health endpoint did not respond" >&2
+          exit 1

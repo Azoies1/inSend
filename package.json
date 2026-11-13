@@ -1,0 +1,28 @@
+{
+  "name": "rtr-sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sandbox-only rent payment backend with a single payment interface and swappable provider adapters.",
+  "workspaces": [
+    "backend"
+  ],
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "npm install && npm run db:up && npm run migrate && npm run serve",
+    "serve": "npm run start -w backend",
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "migrate": "npm run migrate -w backend",
+    "test": "npm test -w backend",
+    "lint": "npm run lint -w backend",
+    "typecheck": "npm run typecheck -w backend",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1"
+  }
+}
