@@ -5,7 +5,8 @@ to the page that settles them.
 
 ## Inputs needed from Thomas
 
-- [ ] Payments Canada developer portal account and sandbox credentials (Goal 2)
+- [x] Payments Canada developer portal account (2026-11-13)
+- [ ] Payments Canada sandbox App keys in `.env` (Goal 2)
 - [ ] Zum Rails sandbox access and API credentials; may require a sales call (Goal 3)
 - [ ] Confirm or change the default stack: TypeScript, Postgres, SwiftUI. Goal 1 was built on the
       default.
