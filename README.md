@@ -33,6 +33,8 @@ No `.env` is needed for the defaults. To change anything, copy `.env.example` to
 | `npm run check`        | Format check, lint, typecheck and tests                       |
 | `npm run migrate`      | Apply pending migrations                                      |
 | `npm run db:up`/`down` | Start or stop the local Postgres container (Docker or Podman) |
+| `npm run test:live`    | Live provider sandbox tests (needs `.env` credentials)        |
+| `npm run record:rtr`   | Re-record RTR sandbox fixtures (needs `.env` credentials)     |
 | `npm run format`       | Format the repo with Prettier                                 |
 
 ## Layout
@@ -42,6 +44,7 @@ backend/
   src/payments/provider.ts      PaymentProvider interface and internal state set
   src/payments/registry.ts      Picks the adapter from PAYMENT_ADAPTER
   src/payments/adapters/fake/   FakeAdapter: settles or rejects on demand
+  src/payments/adapters/rtr-sim/ RTRSimAdapter: Payments Canada RTR sandbox (ISO 20022)
   src/config.ts                 Environment config
   src/app.ts, src/server.ts     HTTP API (health endpoint so far)
   migrations/                   SQL migrations
@@ -68,7 +71,7 @@ itself does not change.
 | Goal | Scope                               | State       |
 | ---- | ----------------------------------- | ----------- |
 | 1    | Project skeleton, interface, fake   | Done        |
-| 2    | Payments Canada RTR sandbox adapter | Not started |
+| 2    | Payments Canada RTR sandbox adapter | Done        |
 | 3    | Zum Rails sandbox adapter           | Not started |
 | 4    | Ledger and rent flow                | Not started |
 | 5    | iOS app                             | Not started |

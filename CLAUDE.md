@@ -21,7 +21,9 @@ guardrail, stop and ask.
 
 - `npm run check`: format check, lint, typecheck, tests. Run before calling anything done.
 - `npm test`: tests only. They need no database or network.
-- `npm start`: install, Postgres via Docker, migrate, run the API.
+- `npm start`: install, Postgres via Docker or Podman, migrate, run the API.
+- `npm run test:live`: live provider sandbox tests (credentials in `.env`). Not part of CI.
+- `npm run record:rtr`: re-record RTR fixtures from the live sandbox. Synthetic data only.
 
 ## Conventions
 

@@ -20,7 +20,9 @@
     "typecheck": "npm run typecheck -w backend",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run lint && npm run typecheck && npm test"
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test",
+    "test:live": "npm run test:live -w backend",
+    "record:rtr": "npm run record:rtr -w backend"
   },
   "devDependencies": {
     "prettier": "^3.10.1"

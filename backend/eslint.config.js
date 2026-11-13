@@ -6,6 +6,15 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    rules: {
+      // `_name` marks a parameter an interface requires but this implementation ignores.
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      ],
+    },
+  },
+  {
     // Guardrail: provider logic stays inside adapters. Only the registry (and
     // tests) may reach into src/payments/adapters.
     files: ['src/**/*.ts'],

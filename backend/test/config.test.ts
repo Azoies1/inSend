@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { ConfigError, loadConfig } from '../src/config';
 import { InvalidAmountError, cents } from '../src/money';
 import { FakeAdapter } from '../src/payments/adapters/fake/FakeAdapter';
+import { RTRSimAdapter } from '../src/payments/adapters/rtr-sim/RTRSimAdapter';
 import { AdapterNotImplementedError } from '../src/payments/provider';
 import { createProvider } from '../src/payments/registry';
 
@@ -33,9 +34,18 @@ describe('createProvider', () => {
     expect(createProvider('fake')).toBeInstanceOf(FakeAdapter);
   });
 
+  it('builds the RTR adapter from its own environment settings', () => {
+    const provider = createProvider('rtr-sim', { RTR_CONSUMER_KEY: 'k', RTR_CONSUMER_SECRET: 's' });
+    expect(provider).toBeInstanceOf(RTRSimAdapter);
+    expect(provider.name).toBe('rtr-sim');
+  });
+
+  it('fails loudly when the RTR adapter has no credentials', () => {
+    expect(() => createProvider('rtr-sim', {})).toThrow(ConfigError);
+  });
+
   it('refuses adapters that are not built yet instead of silently faking them', () => {
-    expect(() => createProvider('rtr-sim')).toThrow(AdapterNotImplementedError);
-    expect(() => createProvider('zum')).toThrow(AdapterNotImplementedError);
+    expect(() => createProvider('zum', {})).toThrow(AdapterNotImplementedError);
   });
 });
 

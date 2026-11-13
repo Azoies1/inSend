@@ -1,0 +1,139 @@
+{
+  "source": "https://api.payments.ca/rtr-sandbox (Payments Canada RTR sandbox), synthetic data only",
+  "token": {
+    "status": 200,
+    "body": "{\"access_token\":\"fixture-token\",\"token_type\":\"Bearer\",\"expires_in\":\"1799\"}"
+  },
+  "fixtures": [
+    {
+      "key": "send:default",
+      "kind": "send",
+      "trigger": "default",
+      "recordedAt": "2026-11-13T18:00:57.314Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181157488\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:00:57.488Z\"},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181157488\",\"creation_date_time\":\"2026-11-13T18:00:57.488Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.008.001.08\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"ACSP\",\"acceptance_date_time\":\"2026-11-13T18:00:57.488Z\",\"clearing_system_reference\":\"RTR13112026181157488\",\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "send:1234567890112",
+      "kind": "send",
+      "trigger": "1234567890112",
+      "recordedAt": "2026-11-13T18:00:59.622Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181159789\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:00:59.789Z\"},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181159789\",\"creation_date_time\":\"2026-11-13T18:00:59.789Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.008.001.08\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"RJCT\",\"acceptance_date_time\":\"2026-11-13T18:00:59.789Z\",\"clearing_system_reference\":\"RTR13112026181159789\",\"status_reason_information\":{\"reason\":{\"code\":\"AB04\"}},\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "send:1234567890116",
+      "kind": "send",
+      "trigger": "1234567890116",
+      "recordedAt": "2026-11-13T18:01:02.411Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181102496\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:01:02.496Z\"},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181102496\",\"creation_date_time\":\"2026-11-13T18:01:02.496Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.008.001.08\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"RJCT\",\"acceptance_date_time\":\"2026-11-13T18:01:02.496Z\",\"clearing_system_reference\":\"RTR13112026181102497\",\"status_reason_information\":{\"reason\":{\"code\":\"AM02\"}},\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "send:1234567897777",
+      "kind": "send",
+      "trigger": "1234567897777",
+      "recordedAt": "2026-11-13T18:01:04.716Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181104598\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:01:04.598Z\"},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181104598\",\"creation_date_time\":\"2026-11-13T18:01:04.598Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.008.001.08\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"RJCT\",\"acceptance_date_time\":\"2026-11-13T18:01:04.598Z\",\"clearing_system_reference\":\"RTR13112026181104598\",\"status_reason_information\":{\"reason\":{\"code\":\"AB03\"}},\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "send:1234567897771",
+      "kind": "send",
+      "trigger": "1234567897771",
+      "recordedAt": "2026-11-13T18:01:06.530Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181106\",\"message_definition_identifier\":\"admi.002.001.01\",\"creation_date\":\"2026-11-13T18:01:06.890Z\"},\"message_reject\":{\"related_reference\":{\"reference\":\"{{messageId}}\"},\"reason\":{\"rejecting_party_reason\":\"FF02\",\"reason_description\":\"File is not valid Mandatory property 'interbank_settlement_date', stipulated by schema property 'required', is missing Error location: fi_to_fi_customer_credit_transfer / credit_transfer_transaction_information Details Property 'credit_transfer_transaction_information' is not valid Property 'fi_to_fi_customer_credit_transfer' is not valid\"}}}"
+      }
+    },
+    {
+      "key": "send:1234567897772",
+      "kind": "send",
+      "trigger": "1234567897772",
+      "recordedAt": "2026-11-13T18:01:08.708Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181108\",\"message_definition_identifier\":\"admi.002.001.01\",\"creation_date\":\"2026-11-13T18:01:08.997Z\"},\"message_reject\":{\"related_reference\":{\"reference\":\"{{messageId}}\"},\"reason\":{\"rejecting_party_reason\":\"DS09\",\"reason_description\":\"The decryption of the payload was not successful.\"}}}"
+      }
+    },
+    {
+      "key": "send:1234567897774",
+      "kind": "send",
+      "trigger": "1234567897774",
+      "recordedAt": "2026-11-13T18:01:10.727Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181111\",\"message_definition_identifier\":\"admi.002.001.01\",\"creation_date\":\"2026-11-13T18:01:11.099Z\"},\"message_reject\":{\"related_reference\":{\"reference\":\"{{messageId}}\"},\"reason\":{\"rejecting_party_reason\":\"DUPL\",\"reason_description\":\"Payment is a duplicate of another payment.\"}}}"
+      }
+    },
+    {
+      "key": "send:1234567897773",
+      "kind": "send",
+      "trigger": "1234567897773",
+      "recordedAt": "2026-11-13T18:01:12.112Z",
+      "response": {
+        "status": 401,
+        "body": ""
+      }
+    },
+    {
+      "key": "status:default",
+      "kind": "status",
+      "trigger": "default",
+      "recordedAt": "2026-11-13T18:01:12.617Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181112895\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:01:12.895Z\"},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181112895\",\"creation_date_time\":\"2026-11-13T18:01:12.895Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.028.001.03\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"ACSP\",\"acceptance_date_time\":\"2026-11-13T18:01:12.895Z\",\"clearing_system_reference\":\"RTR13112026181112895\",\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "status:1234567890112",
+      "kind": "status",
+      "trigger": "1234567890112",
+      "recordedAt": "2026-11-13T18:01:13.214Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181113395\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:01:13.395Z\",\"related\":{\"from\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"to\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"business_message_identifier\":\"{{messageId}}\",\"message_definition_identifier\":\"pacs.028.001.03\",\"creation_date\":\"2026-11-13T18:01:12.617Z\"}},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181113395\",\"creation_date_time\":\"2026-11-13T18:01:13.395Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.028.001.03\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"RJCT\",\"acceptance_date_time\":\"2026-11-13T18:01:13.395Z\",\"clearing_system_reference\":\"RTR13112026181113395\",\"status_reason_information\":{\"reason\":{\"code\":\"AB04\"}},\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "status:1234567890113",
+      "kind": "status",
+      "trigger": "1234567890113",
+      "recordedAt": "2026-11-13T18:01:13.720Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181113994\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:01:13.994Z\",\"related\":{\"from\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"to\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"business_message_identifier\":\"{{messageId}}\",\"message_definition_identifier\":\"pacs.028.001.03\",\"creation_date\":\"2026-11-13T18:01:13.215Z\"}},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181113994\",\"creation_date_time\":\"2026-11-13T18:01:13.994Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.028.001.03\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"RJCT\",\"acceptance_date_time\":\"2026-11-13T18:01:13.994Z\",\"clearing_system_reference\":\"NOTAVAILABLE\",\"status_reason_information\":{\"reason\":{\"code\":\"AG08\"}},\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "status:1234567890114",
+      "kind": "status",
+      "trigger": "1234567890114",
+      "recordedAt": "2026-11-13T18:01:14.317Z",
+      "response": {
+        "status": 200,
+        "body": "{\"business_application_header\":{\"from\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"to\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"business_message_identifier\":\"13112026181114496\",\"message_definition_identifier\":\"pacs.002.001.10\",\"creation_date\":\"2026-11-13T18:01:14.496Z\",\"related\":{\"from\":{\"financial_institution_identification\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}}},\"to\":{\"organisation_identification\":{\"identification\":{\"organisation_identification\":{\"other\":{\"identification\":\"RTR\"}}}}},\"business_message_identifier\":\"{{messageId}}\",\"message_definition_identifier\":\"pacs.028.001.03\",\"creation_date\":\"2026-11-13T18:01:13.720Z\"}},\"fi_to_fi_payment_status_report\":{\"group_header\":{\"message_identification\":\"13112026181114496\",\"creation_date_time\":\"2026-11-13T18:01:14.496Z\"},\"transaction_information_and_status\":{\"original_group_information\":{\"original_message_identification\":\"{{messageId}}\",\"original_message_name_identification\":\"pacs.028.001.03\"},\"original_end_to_end_identification\":\"{{endToEndId}}\",\"original_uetr\":\"{{uetr}}\",\"transaction_status\":\"RJCT\",\"acceptance_date_time\":\"2026-11-13T18:01:14.496Z\",\"clearing_system_reference\":\"NOTAVAILABLE\",\"status_reason_information\":{\"reason\":{\"code\":\"AG09\"}},\"instructing_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"111\"}}},\"instructed_agent\":{\"financial_institution_identification\":{\"clearing_system_member_identification\":{\"member_identification\":\"999\"}}}}}}"
+      }
+    },
+    {
+      "key": "status:1234567898885",
+      "kind": "status",
+      "trigger": "1234567898885",
+      "recordedAt": "2026-11-13T18:01:14.624Z",
+      "response": {
+        "status": 500,
+        "body": "{\"code\":\"EXCH100\",\"message\":\"Internal Server Error\"}"
+      }
+    }
+  ]
+}

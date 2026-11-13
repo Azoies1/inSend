@@ -10,7 +10,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "record:rtr": "tsx test/rtr/record.ts",
+    "test:live": "vitest run --config vitest.live.config.ts"
   },
   "dependencies": {
     "fastify": "^5.12.8",
