@@ -7,7 +7,7 @@ end to end on a rent payment with an iOS front end.
 
 ## Quick start
 
-Requires Node 22.9+ and Docker (for Postgres).
+Requires Node 22.9+ and Docker or Podman (for Postgres). With Podman, run `podman machine start` first.
 
 ```bash
 npm start
@@ -26,14 +26,14 @@ No `.env` is needed for the defaults. To change anything, copy `.env.example` to
 
 ## Commands
 
-| Command                | What it does                               |
-| ---------------------- | ------------------------------------------ |
-| `npm start`            | Install, start Postgres, migrate, run API  |
-| `npm test`             | Run all backend tests (no database needed) |
-| `npm run check`        | Format check, lint, typecheck and tests    |
-| `npm run migrate`      | Apply pending migrations                   |
-| `npm run db:up`/`down` | Start or stop the local Postgres container |
-| `npm run format`       | Format the repo with Prettier              |
+| Command                | What it does                                                  |
+| ---------------------- | ------------------------------------------------------------- |
+| `npm start`            | Install, start Postgres, migrate, run API                     |
+| `npm test`             | Run all backend tests (no database needed)                    |
+| `npm run check`        | Format check, lint, typecheck and tests                       |
+| `npm run migrate`      | Apply pending migrations                                      |
+| `npm run db:up`/`down` | Start or stop the local Postgres container (Docker or Podman) |
+| `npm run format`       | Format the repo with Prettier                                 |
 
 ## Layout
 

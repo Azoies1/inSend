@@ -12,8 +12,8 @@
   "scripts": {
     "start": "npm install && npm run db:up && npm run migrate && npm run serve",
     "serve": "npm run start -w backend",
-    "db:up": "docker compose up -d --wait",
-    "db:down": "docker compose down",
+    "db:up": "node scripts/db.mjs up",
+    "db:down": "node scripts/db.mjs down",
     "migrate": "npm run migrate -w backend",
     "test": "npm test -w backend",
     "lint": "npm run lint -w backend",
